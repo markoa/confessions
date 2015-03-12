@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @confession.body %>
+</p>
+
+<% if @confession.editable? -%>
+  <%= link_to 'Edit', edit_confession_path(@confession) %> |
+<% end -%>
+<%= link_to 'Back', confessions_path %>
